@@ -13,8 +13,8 @@
 
     <ImageView
         android:id="@+id/cover"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="@dimen/d150"
+        android:layout_height="@dimen/d150"
         android:scaleType="centerCrop"
         android:layout_gravity="fill" />
 
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:gravity="bottom"
         android:paddingLeft="4dp"
-        android:textSize="22sp"
+        android:textSize="@dimen/d22sp"
         android:textStyle="bold"
         tools:text="artist" />
 
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:gravity="top"
         android:paddingLeft="4dp"
-        android:textSize="16sp"
+        android:textSize="@dimen/d16sp"
         tools:text="album" />
 
 </LinearLayout>

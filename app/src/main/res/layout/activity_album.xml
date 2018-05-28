@@ -59,7 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@color/colorPrimary"
-        app:itemIconTint="@color/colorAccent"
-        app:itemTextColor="@color/colorAccent"
+        app:itemIconTint="#a6a6a6"
+        app:itemTextColor="#a6a6a6"
         app:menu="@menu/playmenu" />
 </RelativeLayout>
