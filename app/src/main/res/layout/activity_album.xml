@@ -15,7 +15,7 @@
     <ImageView
         android:id="@+id/coverDetail"
         android:layout_width="match_parent"
-        android:layout_height="380dp"
+        android:layout_height="350dp"
         android:scaleType="centerCrop"
         android:layout_marginTop="1dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,18 +25,15 @@
     <LinearLayout
         android:id="@+id/detailContainer"
         android:layout_width="match_parent"
+        android:layout_below="@id/coverDetail"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="381dp">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/songDetail"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginVertical="2dp"
-            android:layout_weight="1"
-            android:minHeight="26dp"
             android:textAlignment="center"
             android:textSize="22sp"
             android:textStyle="bold"
@@ -45,9 +42,8 @@
         <TextView
             android:id="@+id/artistDetail"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginVertical="2dp"
-            android:layout_weight="1"
             android:textAlignment="center"
             android:textSize="16sp"
             tools:text="artist" />
