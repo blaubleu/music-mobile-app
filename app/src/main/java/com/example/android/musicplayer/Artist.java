@@ -17,6 +17,7 @@ public class Artist {
         mAlbum = album;
     }
 
+
     // Getters
     public int getImageId(){
         return mImageId;
