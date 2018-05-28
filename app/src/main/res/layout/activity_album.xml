@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="420dp"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".Album">
+
+    <ImageView
+        android:id="@+id/coverDetail"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sodastereo2" />
+
+    <LinearLayout
+        android:id="@+id/detailContainer"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/songDetail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:text="song" />
+
+        <TextView
+            android:id="@+id/artistDetail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            tools:text="artist" />
+
+
+    </LinearLayout>
+</LinearLayout>
