@@ -56,14 +56,15 @@
             android:background="#a6a6a6"
             android:layout_height="1dp"/>
 
-        <TextView
+        <!--should this be a fragment?-->
+        <ListView
+            android:id="@+id/songs_detail"
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:layout_gravity="center_vertical"
             android:paddingVertical="6dp"
             android:layout_marginLeft="34dp"
             tools:text="song title"
-            android:text="song list"
             android:textSize="@dimen/d16sp"
             android:textStyle="bold"/>
 
