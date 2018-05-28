@@ -12,6 +12,7 @@ public class Album extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
 
+        // update action bar capabilities
         getSupportActionBar().setTitle("Playing");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
