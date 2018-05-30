@@ -18,6 +18,7 @@ public class Indochine implements Parcelable {
         this.mArtist = artist;
         this.mSong = song;
         this.songs = songs;
+        
     }
 
     protected Indochine(Parcel in) {
