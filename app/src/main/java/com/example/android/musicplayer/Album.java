@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toolbar;
 
-import static com.example.android.musicplayer.Indochine.indochine;
+
 
 public class Album extends AppCompatActivity {
     int position;

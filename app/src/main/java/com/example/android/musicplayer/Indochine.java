@@ -5,27 +5,26 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 
-import static com.example.android.musicplayer.R.drawable.indochine;
-
 public class Indochine implements Parcelable {
     private int mCover;
     private String mArtist;
     private String mSong;
+    public ArrayList<Indochine> songs;
 
     public Indochine(){}
 
-    public static ArrayList<Songs> indochine = new ArrayList <>();
-
-    Indochine(int cover, String artist, String song){
-        indochine.add(new Songs(R.drawable.indochine, "Indochine", "J'ai demandé à la lune"));
-        indochine.add(new Songs(R.drawable.indochine, "Indochine", "Punker"));
-        indochine.add(new Songs(R.drawable.indochine, "Indochine", "Glory Hole"));
+    private void Indochine(int cover, String artist, String song){
+        this.mCover = cover;
+        this.mArtist = artist;
+        this.mSong = song;
+        this.songs = songs;
     }
 
     protected Indochine(Parcel in) {
         mCover = in.readInt();
         mArtist = in.readString();
         mSong = in.readString();
+        this.songs = in.readArrayList(null);
     }
 
     public static final Creator <Indochine> CREATOR = new Creator <Indochine>() {
@@ -48,8 +47,8 @@ public class Indochine implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-      /*  out.writeInt(mCover);
-        out.writeString(mArtist);
-        out.writeString(mSong);*/
+        dest.writeInt(mCover);
+        dest.writeString(mArtist);
+        dest.writeString(mSong);
     }
 }
