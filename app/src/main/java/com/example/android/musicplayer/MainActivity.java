@@ -3,7 +3,6 @@ package com.example.android.musicplayer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -29,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("position", position);
                 startActivity(intent);*/
 
-                Indochine datatToSend = new Indochine();
+                CdList datatToSend = new CdList();
                 Intent i = new Intent(MainActivity.this, Album.class);
-                i.putExtra("Indochine",datatToSend);
+                i.putExtra("CdList",datatToSend);
                 startActivity(i);
             }
         });
