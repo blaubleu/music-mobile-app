@@ -5,10 +5,12 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 
+import static com.example.android.musicplayer.R.drawable.indochine;
+
 public class Indochine implements Parcelable {
-    private int cover;
-    private String artist;
-    private String song;
+    private int mCover;
+    private String mArtist;
+    private String mSong;
 
     public Indochine(){}
 
@@ -21,9 +23,9 @@ public class Indochine implements Parcelable {
     }
 
     protected Indochine(Parcel in) {
-        cover = in.readInt();
-        artist = in.readString();
-        song = in.readString();
+        mCover = in.readInt();
+        mArtist = in.readString();
+        mSong = in.readString();
     }
 
     public static final Creator <Indochine> CREATOR = new Creator <Indochine>() {
@@ -32,6 +34,7 @@ public class Indochine implements Parcelable {
             return new Indochine(in);
         }
 
+        //this is what will let me pass the info to the intent
         @Override
         public Indochine[] newArray(int size) {
             return new Indochine[size];
@@ -45,6 +48,8 @@ public class Indochine implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-
+      /*  out.writeInt(mCover);
+        out.writeString(mArtist);
+        out.writeString(mSong);*/
     }
 }

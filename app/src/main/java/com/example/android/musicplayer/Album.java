@@ -17,6 +17,9 @@ public class Album extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
+
+        Indochine object = (Indochine) getIntent().getParcelableExtra("Indochine");
+
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav);
 
 
@@ -32,11 +35,6 @@ public class Album extends AppCompatActivity {
         getSupportActionBar().setTitle("Playing");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Intent detailIntent = getIntent();
-        position = detailIntent.getIntExtra("position", 0);
-        if (position == 0){
-            new Indochine();
-        }
     }
 
 }

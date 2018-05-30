@@ -25,9 +25,14 @@ public class MainActivity extends AppCompatActivity {
         mainView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView <?> parent, View view, int position, long id) {
-                Intent intent = new Intent(MainActivity.this, Album.class);
+                /*Intent intent = new Intent(MainActivity.this, Album.class);
                 intent.putExtra("position", position);
-                startActivity(intent);
+                startActivity(intent);*/
+
+                Indochine datatToSend = new Indochine();
+                Intent i = new Intent(MainActivity.this, Album.class);
+                i.putExtra("Indochine",datatToSend);
+                startActivity(i);
             }
         });
 
