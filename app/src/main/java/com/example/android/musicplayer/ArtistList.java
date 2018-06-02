@@ -9,7 +9,7 @@ public class ArtistList {
     ArtistList(){
 
         // array
-        artists.add(new Artist(R.drawable.indochine3, "CdList", "J'ai demandé à la lune"));
+        artists.add(new Artist(R.drawable.indochine3, "Indochine", "J'ai demandé à la lune"));
         artists.add(new Artist(R.drawable.sodastereo2, "Soda Stereo", "Canción Animal"));
         artists.add(new Artist(R.drawable.louiseattaque3, "Louise Attaque", "à plus tard crocodile"));
         artists.add(new Artist(R.drawable.texas2, "Texas", "The Greatest Hits"));

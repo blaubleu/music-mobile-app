@@ -33,7 +33,7 @@ public class SongsAdapter extends ArrayAdapter<Songs> {
         TextView artist = listView.findViewById(R.id.artistDetail);
         artist.setText(currentSong.getArtist());
 
-        TextView song = listView.findViewById(R.id.songs_detail);
+        TextView song = listView.findViewById(R.id.songDetail);
         song.setText(currentSong.getSong());
 
         return listView;

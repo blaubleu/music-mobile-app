@@ -55,8 +55,8 @@ public class CdList implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-      /*  out.writeInt(mCover);
-        out.writeString(mArtist);
-        out.writeString(mSong);*/
+        dest.writeInt(mCover);
+        dest.writeString(mArtist);
+        dest.writeString(mSong);
     }
 }
