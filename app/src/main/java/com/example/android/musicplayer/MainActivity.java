@@ -18,6 +18,10 @@ import java.util.ArrayList;
  */
 
 public class MainActivity extends AppCompatActivity {
+    // arraylist that populates MainActivty
+    ArrayList<Artist> artists;
+
+    //arrayList that will populate PlayActivity
     ArrayList<Songs> songs = new ArrayList <>();
 
 
@@ -27,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // array list for activity one
-        new ArtistList();
+        artists = ArtistList.getArtists();
         //get parcelable data
         final Indochine data = new Indochine();
 
-        final ArtistAdapter adapter = new ArtistAdapter(this, ArtistList.artists);
+        final ArtistAdapter adapter = new ArtistAdapter(this, artists);
 
         GridView mainView = findViewById(R.id.main_view);
         mainView.setAdapter(adapter);
@@ -53,6 +57,6 @@ public class MainActivity extends AppCompatActivity {
         songs.add(new Songs(R.drawable.indochine, "Indochine", "Punker"));
         songs.add(new Songs(R.drawable.indochine, "Indochine", "Glory Hole"));
 
-        //Log.i("send log by Anahi", songs.get(0).getSong());
+        //Log.i("send log 6/3/2018", songs.get(0).getSong());
     }
 }

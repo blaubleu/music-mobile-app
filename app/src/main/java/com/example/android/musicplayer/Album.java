@@ -15,7 +15,6 @@ import java.util.ArrayList;
 
 public class Album extends AppCompatActivity {
     int position;
-    //String artist;
 
     ArrayList<Songs> songs = new ArrayList <>();
 
@@ -28,11 +27,6 @@ public class Album extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
 
-        //add class where songs list lives
-        new Indochine();
-        //get data from parcelable
-        final Indochine data = new Indochine();
-
         //create widgets
         cover = findViewById(R.id.coverDetail);
         song = findViewById(R.id.songDetail);
@@ -43,7 +37,7 @@ public class Album extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                //logic to switch song list goes here
+                //logic to switch song list goes here if ever added
                 return true;
             }
         });
@@ -61,13 +55,9 @@ public class Album extends AppCompatActivity {
         //String str = iPlay.getStringExtra("cdOpen");
         //song.setText(str);
 
-        // gave this a try... but could be a deprecated style
-        //Indochine songs = getIntent().getParcelableExtra("dataKey");
-        //String song = songs.getSong();
-
         Log.i("Received ", String.valueOf(songs));
         //Log.i("data received", songs.get(0).getArtist());
-        //Log.i("receive log by Anahi", songs.get(0).getSong());
+        //Log.i("received log 6/3/2018", songs.get(0).getSong());
 
     }
 
