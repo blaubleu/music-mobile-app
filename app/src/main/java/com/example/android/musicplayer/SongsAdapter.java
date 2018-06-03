@@ -5,7 +5,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -29,22 +28,12 @@ public class SongsAdapter extends ArrayAdapter<Songs> {
         Songs currentSong = getItem(position);
 
         ImageView cover = listView.findViewById(R.id.cover);
-        if (currentSong.hasCover()){
-            cover.setImageResource(currentSong.getCover());
-            cover.setVisibility(View.VISIBLE);
-        } else {
-            cover.setVisibility(View.GONE);
-        }
+        cover.setImageResource(currentSong.getCover());
 
         TextView artist = listView.findViewById(R.id.artistDetail);
-        if(currentSong.hasArtist()){
-            artist.setText(currentSong.getArtist());
-            artist.setVisibility(View.VISIBLE);
-        } else {
-            artist.setVisibility(View.INVISIBLE);
-        }
+        artist.setText(currentSong.getArtist());
 
-        TextView song = listView.findViewById(R.id.songs_detail);
+        TextView song = listView.findViewById(R.id.songDetail);
         song.setText(currentSong.getSong());
 
         return listView;

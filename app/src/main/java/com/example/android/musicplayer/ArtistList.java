@@ -2,6 +2,10 @@ package com.example.android.musicplayer;
 
 import java.util.ArrayList;
 
+/**
+ * Implemented using supporting information available at Tutorials Point https://www.tutorialspoint.com/java/java_arraylist_class.htm
+ */
+
 public class ArtistList {
 
         public static ArrayList<Artist> artists = new ArrayList <>();
