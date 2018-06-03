@@ -18,6 +18,11 @@ public class Album extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
 
+        //add class where songs list lives
+        new CdList();
+        //get data from parcelable
+        final Indochine data = new Indochine();
+
         Indochine object = (Indochine) getIntent().getParcelableExtra("dataKey");
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav);

@@ -1,6 +1,6 @@
 package com.example.android.musicplayer;
 
-public class Songs {
+public class Songs extends Indochine {
     private int mCover;
     private String mArtist;
     private String mSong;
@@ -19,9 +19,12 @@ public class Songs {
 
     /**
      * Song list constructor
+     * @param indochine
      * @param song
+     * @param s
+     * @param o
      */
-    public Songs(String song){
+    public Songs(int indochine, String song, String s, Object o){
         mSong = song;
     }
 

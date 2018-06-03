@@ -5,58 +5,14 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 
-public class CdList implements Parcelable {
-    private int mCover;
-    private String mArtist;
-    private String mSong;
-    public ArrayList<Indochine> indochine;
+public class CdList {
 
-    public CdList(){}
+    public static ArrayList<Indochine> songs = new ArrayList <>();
 
-    public CdList(int mCover, String mArtist, String mSong, ArrayList<Indochine> indochine){
-        this.mCover = mCover;
-        this.mArtist = mArtist;
-        this.mSong = mSong;
-        this.indochine = indochine;
+    CdList(){
+        songs.add(new Songs(R.drawable.indochine, "Indochine", "J'ai demandé à la lune",songs));
+        //songs.add(new Songs(R.drawable.indochine, "Indochine", "Punker"));
+        //songs.add(new Songs(R.drawable.indochine, "Indochine", "Glory Hole"));
     }
 
-    //public static ArrayList<Songs> cdList = new ArrayList <>();
-
-    /*CdList(int cover, String artist, String song){
-        cdList.add(new Songs(R.drawable.cdList, "CdList", "J'ai demandé à la lune"));
-        cdList.add(new Songs(R.drawable.cdList, "CdList", "Punker"));
-        cdList.add(new Songs(R.drawable.cdList, "CdList", "Glory Hole"));
-    }*/
-
-    protected CdList(Parcel in) {
-        mCover = in.readInt();
-        mArtist = in.readString();
-        mSong = in.readString();
-        this.indochine = in.readArrayList(null);
-    }
-
-    public static final Creator <CdList> CREATOR = new Creator <CdList>() {
-        @Override
-        public CdList createFromParcel(Parcel in) {
-            return new CdList(in);
-        }
-
-        //this is what will let me pass the info to the intent
-        @Override
-        public CdList[] newArray(int size) {
-            return new CdList[size];
-        }
-    };
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(mCover);
-        dest.writeString(mArtist);
-        dest.writeString(mSong);
-    }
 }

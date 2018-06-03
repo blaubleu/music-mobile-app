@@ -52,4 +52,8 @@ public class Indochine implements Parcelable {
         dest.writeString(this.mArtist);
         dest.writeString(this.mSong);
     }
+
+   /* private void indochineSongs(){
+
+    }*/
 }
