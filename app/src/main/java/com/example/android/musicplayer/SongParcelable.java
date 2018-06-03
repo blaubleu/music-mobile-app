@@ -1,5 +1,6 @@
 package com.example.android.musicplayer;
 
+import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -11,41 +12,41 @@ import java.util.ArrayList;
  * Codepath Android Guides https://github.com/codepath/android_guides/wiki/Using-Parcelable
  */
 
-public class Indochine implements Parcelable {
+public class SongParcelable implements Parcelable {
     private int mCover;
     private String mArtist;
     private String mSong;
-    public ArrayList<Indochine> songs;
+    //private ArrayList<Songs> songs;
 
-    public Indochine(){}
+    public SongParcelable(){}
 
     private void Indochine(int cover, String artist, String song){
         this.mCover = cover;
         this.mArtist = artist;
         this.mSong = song;
-        this.songs = songs;
+        //this.songs = songs;
     }
 
 
     // parcel constructor
-    protected Indochine(Parcel in) {
+    protected SongParcelable(Parcel in) {
         mCover = in.readInt();
         mArtist = in.readString();
         mSong = in.readString();
-        this.songs = in.readArrayList(null);
+        //this.songs = in.readArrayList(null);
     }
 
     // method that un-parcels information OR creates individual views
-    public static final Creator <Indochine> CREATOR = new Creator <Indochine>() {
+    public static final Creator <SongParcelable> CREATOR = new Creator <SongParcelable>() {
         @Override
-        public Indochine createFromParcel(Parcel parcel) {
-            return new Indochine(parcel);
+        public SongParcelable createFromParcel(Parcel parcel) {
+            return new SongParcelable(parcel);
         }
 
         //this is what will let me pass the info to the intent
         @Override
-        public Indochine[] newArray(int size) {
-            return new Indochine[size];
+        public SongParcelable[] newArray(int size) {
+            return new SongParcelable[size];
         }
     };
 

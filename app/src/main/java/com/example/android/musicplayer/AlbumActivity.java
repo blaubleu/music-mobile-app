@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,23 +13,19 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class Album extends AppCompatActivity {
+public class AlbumActivity extends AppCompatActivity {
     int position;
+
+    ArrayList<Song> songs = new ArrayList <>();
 
     ImageView cover;
     TextView song;
     TextView artist;
-    ArrayList <? extends IndochineSongList> songs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
-
-        //add class where songs list lives
-        new IndochineSongList();
-        //get data from parcelable
-        final Indochine data = new Indochine();
 
         //create widgets
         cover = findViewById(R.id.coverDetail);
@@ -40,7 +37,7 @@ public class Album extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                //logic to switch song list goes here
+                //logic to switch song list goes here if ever added
                 return true;
             }
         });
@@ -52,11 +49,18 @@ public class Album extends AppCompatActivity {
         //bring intent data
         Intent iPlay = getIntent();
         position = iPlay.getIntExtra("positon", 0);
-        songs = iPlay.getParcelableArrayListExtra("dataKey");
+        //songs = iPlay.getParcelableExtra("dataKey");
+        //iPlay.getExtras();
 
-        // gave this a try... but could be a deprecated style
-        //Indochine songs = getIntent().getParcelableExtra("dataKey");
-        //String song = songs.getSong();
+        String str = iPlay.getStringExtra("songActivity2");
+        song.setText(str);
+
+        String str1 = iPlay.getStringExtra("ArtistActivity2");
+        artist.setText(str1);
+
+        //Log.i("Received ", String.valueOf(songs));
+        //Log.i("data received", songs.get(0).getArtist());
+        //Log.i("received log 6/3/2018", songs.get(0).getSong());
 
     }
 

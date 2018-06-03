@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ArtistList"/>
-        <activity android:name=".Album"
+        <activity android:name=".AlbumActivity"
             android:parentActivityName=".MainActivity"></activity>
     </application>
 

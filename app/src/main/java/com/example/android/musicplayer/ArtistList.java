@@ -3,14 +3,15 @@ package com.example.android.musicplayer;
 import java.util.ArrayList;
 
 /**
- * Implemented using supporting information available at Tutorials Point https://www.tutorialspoint.com/java/java_arraylist_class.htm
+ * Implemented using supporting information available at Baeldung
+ * http://www.baeldung.com
  */
 
 public class ArtistList {
 
-        public static ArrayList<Artist> artists = new ArrayList <>();
+        public static ArrayList<Artist> getArtists(){
 
-    ArtistList(){
+            ArrayList<Artist> artists  = new ArrayList <>();
 
         // array
         artists.add(new Artist(R.drawable.indochine3, "Indochine", "J'ai demandé à la lune"));
@@ -22,5 +23,6 @@ public class ArtistList {
         artists.add(new Artist(R.drawable.amelie2, "Amélie", "Yann Tiersen"));
         artists.add(new Artist(R.drawable.doctorstrange2, "Doctor Strange", "Michael Giacchino"));
 
+        return artists;
     }
 }
