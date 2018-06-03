@@ -3,11 +3,14 @@ package com.example.android.musicplayer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-import static com.example.android.musicplayer.IndochineSongList.songs;
+import java.util.ArrayList;
+
+//import static com.example.android.musicplayer.IndochineSongList.songs;
 
 /**
  * Implemented using supporting information from SitePoint
@@ -15,6 +18,8 @@ import static com.example.android.musicplayer.IndochineSongList.songs;
  */
 
 public class MainActivity extends AppCompatActivity {
+    ArrayList<Songs> songs = new ArrayList <>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +42,17 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Album.class);
                 if (getIntent() != null){
                     intent.putExtra("position", position);
-                    intent.putParcelableArrayListExtra("dataKey", songs); // access to array via parcelable class
+                    intent.putExtra("cdOpen", "Indochine");
+                    //intent.putParcelableArrayListExtra("dataKey", songs); // access to array via parcelable class
                 }
                 startActivity(intent);
             }
         });
 
+        songs.add(new Songs(R.drawable.indochine, "Indochine", "J'ai demandé à la lune"));
+        songs.add(new Songs(R.drawable.indochine, "Indochine", "Punker"));
+        songs.add(new Songs(R.drawable.indochine, "Indochine", "Glory Hole"));
+
+        Log.i("send log by Anahi", songs.get(0).getSong());
     }
 }

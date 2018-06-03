@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 
 public class Album extends AppCompatActivity {
     int position;
+    //String artist;
 
     ImageView cover;
     TextView song;
@@ -52,11 +54,17 @@ public class Album extends AppCompatActivity {
         //bring intent data
         Intent iPlay = getIntent();
         position = iPlay.getIntExtra("positon", 0);
-        songs = iPlay.getParcelableArrayListExtra("dataKey");
+        //songs = iPlay.getParcelableArrayListExtra("dataKey");
+        //iPlay.getExtras();
+        String str = iPlay.getStringExtra("cdOpen");
+        song.setText(str);
 
         // gave this a try... but could be a deprecated style
         //Indochine songs = getIntent().getParcelableExtra("dataKey");
         //String song = songs.getSong();
+
+        Log.i("Received ", "simple data");
+        //Log.i("receive log by Anahi", songs.get(0).getSong());
 
     }
 
