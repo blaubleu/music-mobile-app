@@ -43,11 +43,12 @@ public class MainActivity extends AppCompatActivity {
         mainView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView <?> parent, View view, int position, long id) {
-                Intent intent = new Intent(MainActivity.this, Album.class);
+                Intent intent = new Intent(MainActivity.this, AlbumActivity.class);
                 if (getIntent() != null){
                     intent.putExtra("position", position);
-                    //intent.putExtra("cdOpen", "Indochine");
-                    intent.putParcelableArrayListExtra("dataKey", songs); // access to array via parcelable class
+                    intent.putExtra("ArtistActivity2", "Indochine");
+                    intent.putExtra("songActivity2", "J'ai demandé à la lune");
+                    //intent.putParcelableArrayListExtra("dataKey", songs); // access to array via parcelable class
                 }
                 startActivity(intent);
             }

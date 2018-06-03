@@ -13,7 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class Album extends AppCompatActivity {
+public class AlbumActivity extends AppCompatActivity {
     int position;
 
     ArrayList<Song> songs = new ArrayList <>();
@@ -52,10 +52,13 @@ public class Album extends AppCompatActivity {
         //songs = iPlay.getParcelableExtra("dataKey");
         //iPlay.getExtras();
 
-        //String str = iPlay.getStringExtra("cdOpen");
-        //song.setText(str);
+        String str = iPlay.getStringExtra("songActivity2");
+        song.setText(str);
 
-        Log.i("Received ", String.valueOf(songs));
+        String str1 = iPlay.getStringExtra("ArtistActivity2");
+        artist.setText(str1);
+
+        //Log.i("Received ", String.valueOf(songs));
         //Log.i("data received", songs.get(0).getArtist());
         //Log.i("received log 6/3/2018", songs.get(0).getSong());
 
