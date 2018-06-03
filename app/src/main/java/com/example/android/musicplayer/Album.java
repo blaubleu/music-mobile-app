@@ -17,10 +17,11 @@ public class Album extends AppCompatActivity {
     int position;
     //String artist;
 
+    ArrayList<Songs> songs = new ArrayList <>();
+
     ImageView cover;
     TextView song;
     TextView artist;
-    ArrayList <? extends IndochineSongList> songs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class Album extends AppCompatActivity {
         setContentView(R.layout.activity_album);
 
         //add class where songs list lives
-        new IndochineSongList();
+        new Indochine();
         //get data from parcelable
         final Indochine data = new Indochine();
 
@@ -54,16 +55,18 @@ public class Album extends AppCompatActivity {
         //bring intent data
         Intent iPlay = getIntent();
         position = iPlay.getIntExtra("positon", 0);
-        //songs = iPlay.getParcelableArrayListExtra("dataKey");
+        //songs = iPlay.getParcelableExtra("dataKey");
         //iPlay.getExtras();
-        String str = iPlay.getStringExtra("cdOpen");
-        song.setText(str);
+
+        //String str = iPlay.getStringExtra("cdOpen");
+        //song.setText(str);
 
         // gave this a try... but could be a deprecated style
         //Indochine songs = getIntent().getParcelableExtra("dataKey");
         //String song = songs.getSong();
 
-        Log.i("Received ", "simple data");
+        Log.i("Received ", String.valueOf(songs));
+        //Log.i("data received", songs.get(0).getArtist());
         //Log.i("receive log by Anahi", songs.get(0).getSong());
 
     }

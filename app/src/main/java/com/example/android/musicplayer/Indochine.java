@@ -1,5 +1,6 @@
 package com.example.android.musicplayer;
 
+import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -15,7 +16,7 @@ public class Indochine implements Parcelable {
     private int mCover;
     private String mArtist;
     private String mSong;
-    public ArrayList<Indochine> songs;
+    //private ArrayList<Songs> songs;
 
     public Indochine(){}
 
@@ -23,7 +24,7 @@ public class Indochine implements Parcelable {
         this.mCover = cover;
         this.mArtist = artist;
         this.mSong = song;
-        this.songs = songs;
+        //this.songs = songs;
     }
 
 
@@ -32,7 +33,7 @@ public class Indochine implements Parcelable {
         mCover = in.readInt();
         mArtist = in.readString();
         mSong = in.readString();
-        this.songs = in.readArrayList(null);
+        //this.songs = in.readArrayList(null);
     }
 
     // method that un-parcels information OR creates individual views

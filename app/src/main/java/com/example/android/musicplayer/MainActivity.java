@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Album.class);
                 if (getIntent() != null){
                     intent.putExtra("position", position);
-                    intent.putExtra("cdOpen", "Indochine");
-                    //intent.putParcelableArrayListExtra("dataKey", songs); // access to array via parcelable class
+                    //intent.putExtra("cdOpen", "Indochine");
+                    intent.putParcelableArrayListExtra("dataKey", songs); // access to array via parcelable class
                 }
                 startActivity(intent);
             }
@@ -53,6 +53,6 @@ public class MainActivity extends AppCompatActivity {
         songs.add(new Songs(R.drawable.indochine, "Indochine", "Punker"));
         songs.add(new Songs(R.drawable.indochine, "Indochine", "Glory Hole"));
 
-        Log.i("send log by Anahi", songs.get(0).getSong());
+        //Log.i("send log by Anahi", songs.get(0).getSong());
     }
 }
