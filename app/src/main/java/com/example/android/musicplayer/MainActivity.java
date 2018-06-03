@@ -2,6 +2,7 @@ package com.example.android.musicplayer;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcel;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         new ArtistList();
+        final Indochine data = new Indochine();
 
         final ArtistAdapter adapter = new ArtistAdapter(this, ArtistList.artists);
 
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Album.class);
                 if (getIntent() != null){
                     intent.putExtra("position", position);
-                    //intent.putParcelableArrayListExtra("CD",ArrayList<ArtistList> artists );
+                    intent.putExtra("dataKey", data);
                 }
                 startActivity(intent);
             }

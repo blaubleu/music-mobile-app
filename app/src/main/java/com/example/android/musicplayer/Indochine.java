@@ -18,7 +18,7 @@ public class Indochine implements Parcelable {
         this.mArtist = artist;
         this.mSong = song;
         this.songs = songs;
-        
+
     }
 
     protected Indochine(Parcel in) {
@@ -48,8 +48,8 @@ public class Indochine implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(mCover);
-        dest.writeString(mArtist);
-        dest.writeString(mSong);
+        dest.writeInt(this.mCover);
+        dest.writeString(this.mArtist);
+        dest.writeString(this.mSong);
     }
 }

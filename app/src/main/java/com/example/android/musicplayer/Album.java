@@ -18,7 +18,7 @@ public class Album extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
 
-        Indochine object = (Indochine) getIntent().getParcelableExtra("Indochine");
+        Indochine object = (Indochine) getIntent().getParcelableExtra("dataKey");
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav);
 

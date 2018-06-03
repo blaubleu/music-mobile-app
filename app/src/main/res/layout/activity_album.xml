@@ -37,7 +37,6 @@
             android:layout_marginVertical="2dp"
             android:textAlignment="center"
             android:textSize="22sp"
-            android:text="album"
             android:textStyle="bold"
             tools:text="song" />
 
@@ -49,7 +48,6 @@
             android:textAlignment="center"
             android:textSize="16sp"
             android:paddingBottom="6dp"
-            android:text="artist"
             tools:text="artist" />
         <View
             android:layout_width="wrap_content"
