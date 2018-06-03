@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class Album extends AppCompatActivity {
     int position;
 
-    ArrayList<Songs> songs = new ArrayList <>();
+    ArrayList<Song> songs = new ArrayList <>();
 
     ImageView cover;
     TextView song;

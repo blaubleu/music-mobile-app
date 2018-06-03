@@ -1,6 +1,6 @@
 package com.example.android.musicplayer;
 
-public class Songs extends Indochine {
+public class Song extends Indochine {
     private int mCover;
     private String mArtist;
     private String mSong;
@@ -11,7 +11,7 @@ public class Songs extends Indochine {
      * @param artist
      * @param song
      */
-    public Songs(int cover, String artist, String song){
+    public Song(int cover, String artist, String song){
         mCover = cover;
         mArtist = artist;
         mSong = song;

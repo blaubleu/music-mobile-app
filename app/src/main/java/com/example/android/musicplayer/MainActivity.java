@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Artist> artists;
 
     //arrayList that will populate PlayActivity
-    ArrayList<Songs> songs = new ArrayList <>();
+    ArrayList<Song> songs = new ArrayList <>();
 
 
     @Override
@@ -53,9 +53,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        songs.add(new Songs(R.drawable.indochine, "Indochine", "J'ai demandé à la lune"));
-        songs.add(new Songs(R.drawable.indochine, "Indochine", "Punker"));
-        songs.add(new Songs(R.drawable.indochine, "Indochine", "Glory Hole"));
+        songs.add(new Song(R.drawable.indochine, "Indochine", "J'ai demandé à la lune"));
+        songs.add(new Song(R.drawable.indochine, "Indochine", "Punker"));
+        songs.add(new Song(R.drawable.indochine, "Indochine", "Glory Hole"));
 
         //Log.i("send log 6/3/2018", songs.get(0).getSong());
     }

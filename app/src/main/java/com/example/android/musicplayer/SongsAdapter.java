@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class SongsAdapter extends ArrayAdapter<Songs> {
+public class SongsAdapter extends ArrayAdapter<Song> {
 
-    public SongsAdapter(Activity context, ArrayList<Songs> songs){
+    public SongsAdapter(Activity context, ArrayList<Song> songs){
         super(context, 0, songs);
     }
 
@@ -25,7 +25,7 @@ public class SongsAdapter extends ArrayAdapter<Songs> {
             listView = LayoutInflater.from(getContext()).inflate(R.layout.activity_album, parent, false);
         }
 
-        Songs currentSong = getItem(position);
+        Song currentSong = getItem(position);
 
         ImageView cover = listView.findViewById(R.id.cover);
         cover.setImageResource(currentSong.getCover());
