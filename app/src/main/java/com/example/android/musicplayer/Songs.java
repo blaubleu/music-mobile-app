@@ -17,17 +17,6 @@ public class Songs extends Indochine {
         mSong = song;
     }
 
-    /**
-     * Song list constructor
-     * @param indochine
-     * @param song
-     * @param s
-     * @param o
-     */
-    public Songs(int indochine, String song, String s, Object o){
-        mSong = song;
-    }
-
     // getters
     public int getCover(){
         return mCover;
@@ -40,5 +29,4 @@ public class Songs extends Indochine {
     public String getSong(){
         return mSong;
     }
-
 }

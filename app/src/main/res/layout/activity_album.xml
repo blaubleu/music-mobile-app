@@ -16,9 +16,10 @@
     <ImageView
         android:id="@+id/coverDetail"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:scaleType="centerCrop"
+        android:layout_height="380dp"
         android:layout_marginTop="1dp"
+        android:contentDescription="Indochine"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/indochine" />
@@ -49,10 +50,6 @@
             android:textSize="16sp"
             android:paddingBottom="6dp"
             tools:text="artist" />
-        <View
-            android:layout_width="wrap_content"
-            android:background="#a6a6a6"
-            android:layout_height="1dp"/>
     </LinearLayout>
 
     <android.support.design.widget.BottomNavigationView

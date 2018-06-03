@@ -6,12 +6,19 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toolbar;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import java.util.ArrayList;
 
 
 public class Album extends AppCompatActivity {
     int position;
+
+    ImageView cover;
+    TextView song;
+    TextView artist;
+    ArrayList <? extends IndochineSongList> songs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,14 +26,16 @@ public class Album extends AppCompatActivity {
         setContentView(R.layout.activity_album);
 
         //add class where songs list lives
-        new CdList();
+        new IndochineSongList();
         //get data from parcelable
         final Indochine data = new Indochine();
 
-        Indochine object = (Indochine) getIntent().getParcelableExtra("dataKey");
+        //create widgets
+        cover = findViewById(R.id.coverDetail);
+        song = findViewById(R.id.songDetail);
+        artist = findViewById(R.id.artistDetail);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav);
-
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -37,8 +46,17 @@ public class Album extends AppCompatActivity {
         });
 
         // update action bar capabilities on top nav bar!
-        getSupportActionBar().setTitle("Playing");
+        getSupportActionBar().setTitle("Playing now:");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //bring intent data
+        Intent iPlay = getIntent();
+        position = iPlay.getIntExtra("positon", 0);
+        songs = iPlay.getParcelableArrayListExtra("dataKey");
+
+        // gave this a try... but could be a deprecated style
+        //Indochine songs = getIntent().getParcelableExtra("dataKey");
+        //String song = songs.getSong();
 
     }
 
