@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         // array list for activity one
         artists = ArtistList.getArtists();
         //get parcelable data
-        final Indochine data = new Indochine();
+        final SongParcelable data = new SongParcelable();
 
         final ArtistAdapter adapter = new ArtistAdapter(this, artists);
 

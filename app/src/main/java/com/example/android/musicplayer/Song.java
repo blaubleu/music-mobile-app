@@ -1,6 +1,6 @@
 package com.example.android.musicplayer;
 
-public class Song extends Indochine {
+public class Song extends SongParcelable {
     private int mCover;
     private String mArtist;
     private String mSong;
