@@ -60,7 +60,14 @@ public class AlbumActivity extends AppCompatActivity {
 
         //Log.i("Received ", String.valueOf(songs));
         //Log.i("data received", songs.get(0).getArtist());
-        //Log.i("received log 6/3/2018", songs.get(0).getSong());
+
+        // call parcelable
+        ArrayList<Song> songParcelables = getIntent().getParcelableArrayListExtra("dataKey");
+        for (Song songfromArray: songParcelables){
+            Log.d(this.getClass().getSimpleName(), songfromArray.getArtist());
+            Log.d(this.getClass().getSimpleName(), songfromArray.getSong());
+            Log.d(this.getClass().getSimpleName(), String.valueOf(songfromArray.getCover()));
+        }
 
     }
 
