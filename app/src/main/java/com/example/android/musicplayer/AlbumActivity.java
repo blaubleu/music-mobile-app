@@ -12,7 +12,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-
+/**
+ * Implemented with supporting information from Codinginflow.com
+ * https://github.com/codepath/android_guides/wiki/Using-Parcelable
+ */
 public class AlbumActivity extends AppCompatActivity {
     int position;
 
