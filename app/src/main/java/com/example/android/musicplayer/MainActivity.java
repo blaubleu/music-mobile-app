@@ -2,6 +2,7 @@ package com.example.android.musicplayer;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcel;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -46,7 +47,11 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("position", position);
                     //intent.putExtra("ArtistActivity2", "Indochine");
                     //intent.putExtra("songActivity2", "J'ai demandé à la lune");
-                    intent.putParcelableArrayListExtra("dataKey", songs); // access to array via parcelable class
+
+                    //intent.putParcelableArrayListExtra("dataKey", songs); // access to array via parcelable class
+
+                    // try fom CodinginFlow
+                    intent.putExtra("testIem", songs.get(position));
                 }
                 startActivity(intent);
             }
