@@ -27,11 +27,6 @@ public class AlbumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
 
-        //create widgets
-        cover = findViewById(R.id.coverDetail);
-        song = findViewById(R.id.songDetail);
-        artist = findViewById(R.id.artistDetail);
-
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNav);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -46,28 +41,32 @@ public class AlbumActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Playing now:");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //bring intent data
+        //bring intent data from coding in flow
         Intent iPlay = getIntent();
-        position = iPlay.getIntExtra("positon", 0);
-        //songs = iPlay.getParcelableExtra("dataKey");
-        //iPlay.getExtras();
 
-        String str = iPlay.getStringExtra("songActivity2");
-        song.setText(str);
+        Song song = iPlay.getParcelableExtra("testIem");
+        int cover = song.getCover();
+        String artist = song.getArtist();
+        String song1 = song.getSong();
 
-        String str1 = iPlay.getStringExtra("ArtistActivity2");
-        artist.setText(str1);
+        //create widgets
+        ImageView imageView = findViewById(R.id.coverDetail);
+        imageView.setImageResource(cover);
 
-        //Log.i("Received ", String.valueOf(songs));
-        //Log.i("data received", songs.get(0).getArtist());
+        TextView textView1 = findViewById(R.id.songDetail);
+        textView1.setText(artist);
 
-        // call parcelable
-        ArrayList<Song> songParcelables = getIntent().getParcelableArrayListExtra("dataKey");
+        TextView textView2 = findViewById(R.id.artistDetail);
+        textView2.setText(song1);
+
+
+        // call parcelable - log used to verify data
+     /*   ArrayList<Song> songParcelables = getIntent().getParcelableArrayListExtra("dataKey");
         for (Song songfromArray: songParcelables){
             Log.d(this.getClass().getSimpleName(), songfromArray.getArtist());
             Log.d(this.getClass().getSimpleName(), songfromArray.getSong());
             Log.d(this.getClass().getSimpleName(), String.valueOf(songfromArray.getCover()));
-        }
+        }*/
 
     }
 
