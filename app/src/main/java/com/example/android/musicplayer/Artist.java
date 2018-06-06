@@ -9,7 +9,7 @@ public class Artist implements Parcelable {
     private String mAlbum;
 
     /**
-     * Constructor
+     * Constructor that sets the model for MainActivity
      * @param imageId
      * @param artist
      * @param album
@@ -20,13 +20,17 @@ public class Artist implements Parcelable {
         mAlbum = album;
     }
 
-    // this constructor will provide the second activity data
+    // this constructor will provide the data set for AlbumActivity
     public Artist(String artist, String album, int imageId){
         mArtist = artist;
         mAlbum = album;
         mImageId = imageId;
     }
 
+    /**
+     * Implementing Parcelable
+     * @param in
+     */
     protected Artist(Parcel in) {
         mImageId = in.readInt();
         mArtist = in.readString();

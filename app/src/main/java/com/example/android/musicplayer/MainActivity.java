@@ -11,21 +11,19 @@ import android.widget.GridView;
 
 import java.util.ArrayList;
 
-//import static com.example.android.musicplayer.IndochineSongList.songs;
-
 /**
- * Implemented using supporting information from SitePoint
- * https://www.sitepoint.com/transfer-data-between-activities-with-android-parcelable/
+ * Implemented using supporting information from
+ * SitePoint - https://www.sitepoint.com/transfer-data-between-activities-with-android-parcelable/
+ * Codepath - https://github.com/codepath/android_guides/wiki/Using-Parcelable
+ * Coding in Flow https://codinginflow.com/tutorials/android/parcelable
+ * Acknowledgements to Iip Permana, Rex Sikora, Natalia and Deepak
  */
 
 public class MainActivity extends AppCompatActivity {
-    // arraylist that populates MainActivty
+    // initialize array list MainActivity
     ArrayList<Artist> artists;
-    //2nd array
+    // initialize array list for AlbumActivity
     ArrayList<Artist> artists1;
-
-    //arrayList that will populate PlayActivity
-    ArrayList<Song> songs = new ArrayList <>();
 
 
     @Override
@@ -33,9 +31,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // array list for activity one
+        // get inner class for MainActivity
         artists = ArtistList.getArtists();
-        // // array list for activity two
+
+        // get inner class for AlbumActivity
         artists1 = ArtistList.getArtists1();
 
         final ArtistAdapter adapter = new ArtistAdapter(this, artists);
@@ -49,22 +48,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, AlbumActivity.class);
                 if (getIntent() != null){
                     intent.putExtra("position", position);
-                    //intent.putExtra("ArtistActivity2", "Indochine");
-                    //intent.putExtra("songActivity2", "J'ai demandé à la lune");
-
-                    //intent.putParcelableArrayListExtra("dataKey", songs); // access to array via parcelable class
-
-                    // try fom CodinginFlow
                     intent.putExtra("testIem", artists1.get(position));
                 }
                 startActivity(intent);
             }
         });
 
-        songs.add(new Song(R.drawable.indochine, "Indochine", "J'ai demandé à la lune"));
-        songs.add(new Song(R.drawable.indochine, "Indochine", "Punker"));
-        songs.add(new Song(R.drawable.indochine, "Indochine", "Glory Hole"));
-
+        // following line mostly kept to show the process, this log was used in an earlier iteration
         //Log.i("send log 6/3/2018", songs.get(0).getSong());
     }
 }
