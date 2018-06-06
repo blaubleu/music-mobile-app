@@ -16,7 +16,7 @@
     <ImageView
         android:id="@+id/coverDetail"
         android:layout_width="match_parent"
-        android:layout_height="380dp"
+        android:layout_height="367dp"
         android:layout_marginTop="1dp"
         android:contentDescription="Indochine"
         android:scaleType="centerCrop"
@@ -50,7 +50,14 @@
             android:textSize="16sp"
             android:paddingBottom="6dp"
             tools:text="artist" />
-    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:progress="3"
+        app:layout_constraintVertical_bias="0.90"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomNav"

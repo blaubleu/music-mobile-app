@@ -21,6 +21,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     // arraylist that populates MainActivty
     ArrayList<Artist> artists;
+    //2nd array
+    ArrayList<Artist> artists1;
 
     //arrayList that will populate PlayActivity
     ArrayList<Song> songs = new ArrayList <>();
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
         // array list for activity one
         artists = ArtistList.getArtists();
+        // // array list for activity two
+        artists1 = ArtistList.getArtists1();
 
         final ArtistAdapter adapter = new ArtistAdapter(this, artists);
 
@@ -51,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                     //intent.putParcelableArrayListExtra("dataKey", songs); // access to array via parcelable class
 
                     // try fom CodinginFlow
-                    intent.putExtra("testIem", songs.get(position));
+                    intent.putExtra("testIem", artists1.get(position));
                 }
                 startActivity(intent);
             }

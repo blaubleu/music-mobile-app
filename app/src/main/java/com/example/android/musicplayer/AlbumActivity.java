@@ -20,10 +20,12 @@ public class AlbumActivity extends AppCompatActivity {
     int position;
 
     ArrayList<Song> songs = new ArrayList <>();
+    ArrayList<Artist> artists1 = new ArrayList <>();
 
     ImageView cover;
     TextView song;
     TextView artist;
+    TextView album;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +49,16 @@ public class AlbumActivity extends AppCompatActivity {
         //bring intent data from coding in flow
         Intent iPlay = getIntent();
 
-        Song song = iPlay.getParcelableExtra("testIem");
+    /*    Song song = iPlay.getParcelableExtra("testIem");
         int cover = song.getCover();
         String artist = song.getArtist();
-        String song1 = song.getSong();
+        String song1 = song.getSong();*/
+
+        Artist song = iPlay.getParcelableExtra("testIem");
+        String artist = song.getArtist();
+        String album = song.getAlbum();
+        int cover = song.getImageId();
+
 
         //create widgets
         ImageView imageView = findViewById(R.id.coverDetail);
@@ -60,7 +68,7 @@ public class AlbumActivity extends AppCompatActivity {
         textView1.setText(artist);
 
         TextView textView2 = findViewById(R.id.artistDetail);
-        textView2.setText(song1);
+        textView2.setText(album);
 
 
         // call parcelable - log used to verify data
