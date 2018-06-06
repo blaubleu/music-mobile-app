@@ -12,18 +12,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Implemented with supporting information from Codinginflow.com
- * https://github.com/codepath/android_guides/wiki/Using-Parcelable
- */
 public class AlbumActivity extends AppCompatActivity {
     int position;
 
-    ArrayList<Song> songs = new ArrayList <>();
+    ArrayList<Artist> artists1 = new ArrayList <>();
 
     ImageView cover;
-    TextView song;
     TextView artist;
+    TextView album;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,22 +31,24 @@ public class AlbumActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                //logic to switch song list goes here if ever added
+                // logic to switch song list goes here
+                // playing songs is out of scope for this project
+                // no logic being implemented this time
                 return true;
             }
         });
 
-        // update action bar capabilities on top nav bar!
+        // add action bar capabilities on top nav bar
         getSupportActionBar().setTitle("Playing now:");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //bring intent data from coding in flow
+        // bring intent data from MainActivity
         Intent iPlay = getIntent();
-
-        Song song = iPlay.getParcelableExtra("testIem");
-        int cover = song.getCover();
+        Artist song = iPlay.getParcelableExtra("testIem");
         String artist = song.getArtist();
-        String song1 = song.getSong();
+        String album = song.getAlbum();
+        int cover = song.getImageId();
+
 
         //create widgets
         ImageView imageView = findViewById(R.id.coverDetail);
@@ -60,9 +58,9 @@ public class AlbumActivity extends AppCompatActivity {
         textView1.setText(artist);
 
         TextView textView2 = findViewById(R.id.artistDetail);
-        textView2.setText(song1);
+        textView2.setText(album);
 
-
+        // this section kept mostly to show the process, pertains to an earlier iteration
         // call parcelable - log used to verify data
      /*   ArrayList<Song> songParcelables = getIntent().getParcelableArrayListExtra("dataKey");
         for (Song songfromArray: songParcelables){
