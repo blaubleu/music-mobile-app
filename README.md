@@ -9,5 +9,6 @@ Mostly the layout and logic for a music playing app.<hr>
 <li>Parcelable</li>
 </ul>
 <p>Preview:
+    
 ![preview](/images/radio_rantina_composite_.jpg)
     
