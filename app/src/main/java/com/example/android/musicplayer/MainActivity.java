@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * SitePoint - https://www.sitepoint.com/transfer-data-between-activities-with-android-parcelable/
  * Codepath - https://github.com/codepath/android_guides/wiki/Using-Parcelable
  * Coding in Flow https://codinginflow.com/tutorials/android/parcelable
- * Acknowledgements to Iip Permana, Rex Sikora, Natalia and Deepak
+ * Acknowledgements to Iip Permana, Rex Sikora, Natalia and Deepak Sharma for all the knowledge shared
  */
 
 public class MainActivity extends AppCompatActivity {
