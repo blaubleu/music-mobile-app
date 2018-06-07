@@ -3,7 +3,7 @@ package com.example.android.musicplayer;
 import java.util.ArrayList;
 
 /**
- * Implemented using supporting information available at Baeldung
+ * Implemented using supporting information from Baeldung
  * http://www.baeldung.com
  */
 
