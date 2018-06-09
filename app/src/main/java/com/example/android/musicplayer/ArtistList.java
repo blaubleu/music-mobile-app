@@ -38,8 +38,4 @@ public class ArtistList {
 
         return artists1;
     }
-
-
-    private static class Artist1 {
-    }
 }
