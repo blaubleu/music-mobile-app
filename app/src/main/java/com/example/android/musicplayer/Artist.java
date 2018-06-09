@@ -73,6 +73,4 @@ public class Artist implements Parcelable {
     public String getAlbum() {
         return mAlbum;
     }
-
-
 }

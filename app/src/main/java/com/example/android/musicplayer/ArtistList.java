@@ -2,11 +2,6 @@ package com.example.android.musicplayer;
 
 import java.util.ArrayList;
 
-/**
- * Implemented using supporting information from Baeldung
- * http://www.baeldung.com
- */
-
 public class ArtistList {
 
     public static ArrayList<Artist> getArtists(){

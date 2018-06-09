@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Music Player</string>
+    <!--custom name-->
     <string name="label">Radio Cantina</string>
+    <!--text displayed on top navigation bar-->
+    <string name="topNavBarTxt">Playing now:</string>
 </resources>

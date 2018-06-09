@@ -12,18 +12,20 @@ import android.widget.GridView;
 import java.util.ArrayList;
 
 /**
- * Implemented using supporting information from
+ * Throughout this project the following sources were researched
  * SitePoint - https://www.sitepoint.com/transfer-data-between-activities-with-android-parcelable/
  * Codepath - https://github.com/codepath/android_guides/wiki/Using-Parcelable
- * Coding in Flow https://codinginflow.com/tutorials/android/parcelable
- * Acknowledgements to Iip Permana, Rex Sikora, Natalia and Deepak Sharma for all the knowledge shared
+ * Coding in Flow - https://codinginflow.com/tutorials/android/parcelable
+ * Baeldung - http://www.baeldung.com
+ *
+ * Acknowledgements to Rex Sikora, Iip Permana, Deepak Sharma and Natalia for all the knowledge shared
  */
 
 public class MainActivity extends AppCompatActivity {
     // initialize array list MainActivity
-    ArrayList<Artist> artists;
+    private ArrayList<Artist> artists;
     // initialize array list for AlbumActivity
-    ArrayList<Artist> artists1;
+    private ArrayList<Artist> artists1;
 
 
     @Override
@@ -53,8 +55,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        // following line mostly kept to show the process, this log was used in an earlier iteration
-        //Log.i("send log 6/3/2018", songs.get(0).getSong());
     }
 }
