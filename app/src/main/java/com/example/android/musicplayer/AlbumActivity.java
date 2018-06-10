@@ -13,13 +13,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class AlbumActivity extends AppCompatActivity {
-    private int position;
-
-    private ArrayList<Artist> artists1 = new ArrayList <>();
-
-    ImageView cover;
-    TextView artist;
-    TextView album;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +39,6 @@ public class AlbumActivity extends AppCompatActivity {
         String artist = song.getArtist();
         String album = song.getAlbum();
         int cover = song.getImageId();
-
 
         //create widgets
         ImageView imageView = findViewById(R.id.coverDetail);

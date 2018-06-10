@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/d1dp"
-            android:paddingBottom="6dp"
+            android:paddingBottom="@dimen/d6dp"
             android:textAlignment="center"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/d16sp"
@@ -68,7 +68,7 @@
         android:layout_height="@dimen/d56dp"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary"
-        app:itemIconTint="#a6a6a6"
-        app:itemTextColor="#a6a6a6"
+        app:itemIconTint="@color/gray"
+        app:itemTextColor="@color/gray"
         app:menu="@menu/playmenu" />
 </RelativeLayout>
