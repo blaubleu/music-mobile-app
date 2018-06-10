@@ -1,7 +1,7 @@
 # Music App
 <h3>Radio Cantina</h3>
-Mostly the layout and logic for a music playing app.<hr>
-<strong>Implementations learned:</strong>
+Layout and logic for a music playing multi-screen app.<hr>
+<strong>Classes, Interfaces and Objects used:</strong>
 <ul>
 <li>ArrayList</li>
 <li>ArrayAdapter</li>
